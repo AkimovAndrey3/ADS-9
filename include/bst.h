@@ -23,7 +23,7 @@ class BST {
     int count;
     Node* left;
     Node* right;
-  }
+  };
   Node* root;
 
   Node* addNode(Node* root, const T& value) {
