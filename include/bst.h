@@ -53,6 +53,7 @@ class BST {
     } else if (root->value == value) {
       return root->count;
     }
+   return 0;
   }
 
   int getDepth(Node* root) {
@@ -61,10 +62,10 @@ class BST {
     }
     int rightTree = getDepth(root->right);
     int leftTree = getDepth(root->left);
-    if (rightTree > rightTree) {
-      return this->right + 1;
+    if (rightTree > leftTree) {
+      return rightTree + 1;
     } else {
-      return this->left + 1;
+      return leftTree + 1;
     }
   }
 };
