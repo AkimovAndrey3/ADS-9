@@ -17,7 +17,6 @@ class BST {
   }
 
  private:
-  Node* root;
   struct Node {
     Node() :count(0), left(nullptr), right(nullptr) {}
     T value;
@@ -25,6 +24,7 @@ class BST {
     Node* left;
     Node* right;
   }
+  Node* root;
 
   Node* addNode(Node* root, const T& value) {
     if (!root) {
