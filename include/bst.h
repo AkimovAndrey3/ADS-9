@@ -53,7 +53,7 @@ class BST {
     } else if (root->value == value) {
       return root->count;
     }
-   return 0;
+    return 0;
   }
 
   int getDepth(Node* root) {
