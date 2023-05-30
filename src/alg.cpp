@@ -18,12 +18,12 @@ BST<std::string> makeTree(const char* filename) {
     while (1) {
       char symb = file.get();
       if ((symb >= 65 && symb <= 90) || (symb >= 97 && symb <= 122)) {
-        word += tolower(dop);
+        word += tolower(symb);
       } else {
         break;
       }
     }
-    bst.Add(word);
+    bst.AddValue(word);
   }
   return bst;
 }
