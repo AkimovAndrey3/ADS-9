@@ -27,24 +27,24 @@ class BST {
   Node* root;
 
   Node* addNode(Node* root, const T& value) {
-    if (!root) {
+    if (root == nullptr) {
       root = new Node;
       root->value = value;
       root->left = nullptr;
       root->right = nullptr;
       root->count = 1;
     } else if (root->value > value) {
-      root->left = addNode(root->left, value);
-    } else if (root->value < value) {
       root->right = addNode(root->right, value);
+    } else if (root->value < value) {
+      root->left = addNode(root->left, value);
     } else {
       root->count++;
     }
-    return(root);
+    return root;
   }
 
   int searchNode(Node* root, const T& value) {
-    if (!root) {
+    if (root == nullptr) {
       return 0;
     } else if (root->value < value) {
       return searchNode(root->left, value);
