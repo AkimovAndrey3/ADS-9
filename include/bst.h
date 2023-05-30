@@ -9,10 +9,10 @@ class BST {
   void AddValue(const T& value) {
     root = addNode(root, value);
   }
-  int SearchValue(const T& value) {
+  int search(const T& value) {
     return searchNode(root, value);
   }
-  int depthTree() {
+  int depth() {
     return getDepth(root) - 1;
   }
 
