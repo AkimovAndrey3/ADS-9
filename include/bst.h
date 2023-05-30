@@ -45,7 +45,7 @@ class BST {
 
   int searchNode(Node* root, const T& value) {
     if (!root) {
-      return;
+      return 0;
     } else if (root->value < value) {
       return searchNode(root->left, value);
     } else if (root->value > value) {
@@ -62,10 +62,10 @@ class BST {
     int rightTree = getDepth(root->right);
     int leftTree = getDepth(root->left);
     if (rightTree > rightTree) {
-      return right + 1;
+      return this->right + 1;
     } else {
-      return left + 1;
+      return this->left + 1;
     }
   }
-}
+};
 #endif  // INCLUDE_BST_H_
